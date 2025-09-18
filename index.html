@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PLAYIDTV MPD PLAYER</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+margin: 0px;
+}
+
+.jwplayer {
+position: absolute !important;
+}
+
+.jwplayer.jw-flag-aspect-mode {
+min-height: 100%;
+max-height: 100%;
+}
+</style>
+</head>
+<body>
+<div id="jwplayerDiv"></div>
+<script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
+<script type="text/javascript">
+// Use the PHP configuration directly within the JavaScript
+var config = {"file":"https://atemecdnbalancer-voe.sysln.id/live/eds/DMAXHD/mpd/DMAXHD.mpd","drm":{"clearkey":{"keyId":"62fae935e91c4e8d9e835a294ea81909","key":"328cfed51cba1bfa41f1bda219ceeff8"}}};
+
+jwplayer("jwplayerDiv").setup({
+file: config.file,
+position: 'bottom',
+autostart: true,
+stretching: "",
+width: "100%",
+type: "dash",
+drm: {
+clearkey: {
+keyId: config.drm.clearkey.keyId,
+key: config.drm.clearkey.key
+}
+}
+});
+</script>
+</body>
+</html>
+
